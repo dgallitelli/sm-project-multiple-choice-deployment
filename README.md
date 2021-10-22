@@ -2,6 +2,8 @@
 
 A SageMaker Projects template to deploy a model from Model Registry, choosing your preferred method of deployment among async (Asynchronous Inference), batch (Batch Transform), realtime (Real-time Inference Endpoint). More to be added soon!
 
+![project-parameters.png](images/project-parameters.png)
+
 ## Adding the template to Studio (courtesy of [sagemaker-custom-project-templates](https://github.com/aws-samples/sagemaker-custom-project-templates))
 ### 1. Create a Service Catalog Portfolio
 * Open the AWS Service Catalog console at https://console.aws.amazon.com/servicecatalog/
