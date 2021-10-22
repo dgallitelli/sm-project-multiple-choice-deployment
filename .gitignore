@@ -1,0 +1,5 @@
+outputs
+.ipynb_checkpoints
+.vscode
+.env
+.DS_Store
