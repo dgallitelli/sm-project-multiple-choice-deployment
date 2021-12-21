@@ -10,6 +10,9 @@ Parameters:
   SageMakerProjectId:
     Type: String
     Description: Service generated Id of the project.
+  SeedCodeBucket:
+    Type: String
+    Description: The S3 bucket where you've uploaded the source seedocdes (used with init.sh).
   SourceModelPackageGroupName:
     Type: String
     Description: Name of the ModelPackageGroup for which deployments should be triggered for
@@ -84,8 +87,8 @@ Resources:
       RepositoryDescription: !Sub SageMaker Endpoint deployment infrastructure as code for the Project ${SageMakerProjectName}
       Code:
         S3:
-          Bucket: <#####BUCKET-PLACEHOLDER#####>
-          Key: !Sub <#####FILE-PATH-PLACEHOLDER#####>/${DeploymentType}-seedcode.zip
+          Bucket: !Sub ${SeedCodeBucket}
+          Key: !Sub awsome-sagemaker-projects-templates/seedcodes/${DeploymentType}-seedcode.zip
         BranchName: main
   ModelDeployBuildProject:
     Type: AWS::CodeBuild::Project
